@@ -1,0 +1,68 @@
+<html>
+    <body>
+       <h2>String method</h2>
+      
+    <script>
+        let text="we are the so-called \"vikings\" from the north.";
+        let text2='we are the so-called \'vikings\' from the north.';
+        let text3="we are the so-called 'vikings' from the north.";
+        let text4='we are the so-called "vikings" from the borth.';
+        let length=text.length
+        let length2=text2.length
+        console.log(text)
+        console.log(text2)
+        console.log(text3)
+        console.log(text4)
+        console.log(length)
+        console.log(length2)
+        let str="apple, Banana, Kiwi";
+        let part=str.slice(7,13);
+        let part2=str.slice(-12,-6)
+        let part3=str.slice(7);
+        console.log(part)
+        console.log(part2)
+        console.log(part3)
+        let substr="apple, banana, kiwi";
+        let partsub=substr.substring(7,13)
+        let partsub2=substr.substring(-7,13)
+        let partsub3=substr.substr(7,5)
+        let partsub4=substr.substr(7)
+        console.log(partsub)
+        console.log(partsub2)
+        console.log(partsub3)
+        console.log(partsub4)
+
+        let rplc="Please visit Microsoft";
+        let newtext=rplc.replace("Microsoft","MySkill");
+        console.log(newtext)
+
+        let texta="Hello World!";
+        let textb=texta.toUpperCase();
+        let textc=texta.toLowerCase();
+        console.log(textb)
+        console.log(textc)
+        console.log(texta.replace('Hello','hai').toUpperCase());
+        let text11="selamat";
+        let text12="datang";
+        let text13=text11.concat(" ",text12)
+        let text14=text11 +" "+text12;
+        console.log(text13)
+        console.log(text14)
+
+        let texttrim="                Hallo dunia!        ";
+        let texttrims=texttrim.trim();
+        console.log(texttrims)
+
+        let stringg="please locate where 'locate' occurs!";
+        console.log(stringg.indexOf("locate")); //result 7
+        console.log(stringg.lastIndexOf("locate")); //result 7
+        console.log(stringg.search("locate"));
+
+        let textinc="hello world, welcome to the universe";
+        console.log(textinc.includes("world"));
+        console.log(textinc.startsWith("hello"));
+
+
+    </script>
+    </body>
+</html>

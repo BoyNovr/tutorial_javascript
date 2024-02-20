@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <p>how to pass parameter values when using the addEventListener() method</p>
+    <button id="myBtn">Try It</button>
+    <p id="demo"></p>
+    <script>
+        let p1=7;
+        let p2=7;
+        document.getElementById('myBtn').addEventListener('click', function(){
+            myFunction(p1,p2);
+        })
+        function myFunction(p1,p2){
+            document.getElementById('demo').innerHTML=p1*p2;
+        }
+    </script>
+    </body>
+</html>

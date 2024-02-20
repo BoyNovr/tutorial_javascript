@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- <h2>Javascript HTML DOM</h2>
+    <p id="intro">Finding HTML elements by Id</p>
+    <p>this example demonstrate the <b> getElementsById</b> method.</p>
+    <p id="demo"></p>
+    <script>
+    const element=document.getElementById('intro');
+    document.getElementById('demo').innerHTML='the text from the intro paragraph is:' + element.innerHTML;
+    </script> -->
+<!-- <script>
+let url=document.URL
+console.log(url);
+
+</script> -->
+
+<!-- <h2>Javascript HTML DOM</h2>
+    <p>Finding HTML elements by class name</p>
+    <p class="intro">Hello World</p>
+    <p class="intro">this example demonstrate the <b> getElementsByclassname</b> method.</p>
+    <p id="demo"></p>
+    <script>
+    const element=document.getElementsByClassName('intro');
+    document.getElementById('demo').innerHTML='the first paragraph (index 0) with class="intro" is: ' + element[0].innerHTML;
+    </script> -->
+
+    <h2>Javascript HTML DOM</h2>
+    <p>finding html element by query selector</p>
+    <p class="intro">hello world</p>
+    <p class="intro">examplev<b>query selectorAll</b> method</p>
+    <p id="demo"></p>
+    <script>
+        const x=document.querySelectorAll('p.intro');
+        // console.log(x)
+        document.getElementById('demo').innerHTML='the first paragraph (index 0) with class="intro" is: '+ x[0].innerHTML; 
+    </script>
+</body>
+</html>

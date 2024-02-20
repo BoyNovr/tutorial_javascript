@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <body>
+            <script>
+                let text="Visit myHome";
+                let n=text.search('myhome')//-1 =>case sensitive ,jadi tidak ditemukan, hasil jadi -1
+                let m=text.search(/myhome/i)//menggunakan regex untuk method search dengan pattern myhome dan pengubah i sehingga tidak perlu case sensitive
+                //pola regex
+                let pattern=/it/
+                //method test untuk regex
+                console.log(pattern.test(text))//true
+                console.log(n)//-1
+                console.log(m)//6
+                //modifier pada regex=i =perform case insensitive
+                //g=menemukan dan memodifikasi semua yang match 
+                let text2="apakah ini semua ada apakah";
+                let result=text2.match(/apakah/g);
+                console.log(result)//apakah apakah
+
+                let patternn=/(?=.*[0-9])([a-zA-Z0-9!@#$]){6,20}/g
+                let textt="password"
+                let textt2="#Password123"
+                console.log(patternn.test(textt))//false
+                console.log(patternn.test(textt2))//true
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1> Javascript Course </h1>
+    <p> in this example, from mySkill 2022.</p>
+    <p id="demo"></p>
+<script>
+    // function greet(){
+    //     console.log('hello world');
+    // }
+    // function welcome(){
+    //     console.log('welcome boy novriyal');
+    // }
+    // function greetWelcome(){
+    // greet();
+    // welcome();
+    // }
+    // greetWelcome()
+
+    // function showMessage(from,text){
+    //     console.log(from+': '+text)
+    // }
+    // showMessage('boy','hello');
+    // function add(num1,num2){
+    //     return num1*num2;
+    // }
+    // let x=add(2,3)
+    // console.log(x)
+    function checkAge(age){
+        if(age>=18){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    let age=19;
+    if(checkAge(age)){
+        console.log('Access granted');
+    }else{
+        console.log('Access Denied')
+    }
+    function showJob(age){
+        if(!checkAge(age)){
+            return;
+        }
+        console.log('ini list jobnya');
+    }
+    showJob(age)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+    <body>
+       <h2>math method</h2>
+      
+    <script>
+    const fruits=["banana","orange","apple","mango"];
+    console.log(fruits)
+    console.log(fruits.toString());
+    console.log(fruits.join(";"))
+    //pop =>mengambil dan menghapus elemen terakhir dari array dan menyimpan ke variable baru
+    let fruit=fruits.pop()
+    console.log(fruits)//["banana","orange","apple"]
+    console.log(fruit)//mango
+    //push utk menambah elemen array
+    let fruitt=fruits.push("avocado")
+    console.log(fruits)
+    console.log(fruitt)//4 =index ke empat
+    //shift mirip dengan pop tetapi cara kerja nya ambil yg elemn awal
+    let fruitss=fruits.shift()
+    console.log(fruitss)//banana
+    console.log(fruits)//["orange","apple","mango"]
+    //unshift kebalikan dari push, jika push menambah elem di akhir array jika unshift di depan arrat
+    let fruitp=fruits.unshift("Banana")
+        console.log(fruitp)//5 =jumlah length dari array
+        console.log(fruits)//['Banana', 'orange', 'apple', 'avocado']
+        fruits[0]="lemon";//cara mengganti elemen pada array
+        console.log(fruits)
+        fruits[fruits.length]="Kiwi"//mengambil panjang length dan mengisi sesuai indek ke length
+        console.log(fruits)//['lemon', 'orange', 'apple', 'avocado', 'Kiwi']
+        //concat=menggabungkan dua array menjadi satu
+        const myGirl=["cecilia","lone"]
+        const myBoy=["emil","tobias","linus"]
+        const child=myBoy.concat(myGirl)
+        console.log(child)
+        //delete=menghapus elemen array sesuai index yang di tntukan namnu saat menggunakan delete, indeks yang dihapus
+        //akan menjadi undefined/empty dan meninggalkan sebuah lubang cara mengatasinya dengan splice
+        delete child[1]
+        console.log(child)//['emil', empty, 'linus', 'cecilia', 'lone']
+        child.splice(1,1,"boy")
+        console.log(child)//['emil', 'boy', 'linus', 'cecilia', 'lone']
+        //splice()=untuk menambhkan item baru ke array tapi kita bisa menetukan posisi indeknya
+        const vege=["Toge","timun","wartel"]
+        //parameter pertama menentukan posisi array yg di tambah,parameter kedua menetukan brp byk elemen dari array yg di hapus setelah parameter pertama
+        //metode splice membuat elemen array baru dengan item/elemen yang di hapus sehingga mengatasi metode delete
+        vege.splice(2,0,"terong","lobak")
+        console.log(vege)//['Toge', 'timun', 'terong', 'lobak', 'wartel']
+        //slice =utk memotong/ mengiris elemen/posisi dari array yang di tentukan
+        console.log(vege.slice(1));//['timun', 'terong', 'lobak', 'wartel']
+        //slice bisa mengambil dua argumen/dua irisan ,
+        const buah=["jeruk","pepaya","mangga","pisang","apel"]
+        const sliceb=buah.slice(1,3)
+        console.log(sliceb)
+        console.log(buah.slice(1,3))//jeruk|pepaya,mangga|pisang,apel
+        //['pepaya', 'mangga']
+        //sort=>untuk mengurutkan item array sesuai abjad
+        const food=["nasgor","bakso","pizza","roti","mie"]
+        console.log(food.sort())
+        //reverse=.kebalikan sort , mengurutkan secara descending
+        console.log(food.reverse())
+        const points=["40",100,1,"5",25,10]
+        console.log(points.sort())//[1, 10, 100, 25, '40', '5']
+        //karena sort terkadang tidak akurat dalam mengurutkan angka maka perlu fungsi 
+        point=points.sort(function(a,b){return a-b})//ascending sort
+        // point2=points.sort(function(a,b){return b-a})//descending sort
+        console.log(point)//[1, '5', 10, 25, '40', 100]
+        // console.log(point2)//[100, '40', 25, 10, '5', 1]
+        //sortir array dalam object
+        const cars=[
+            {type:"volvo",year:2016},
+            {type:"saab",year:2001},
+            {type:"BMW",year:2010}
+        ];
+       car=cars.sort(function(a,b){return a.year-b.year})
+       console.log(car)
+    </script>
+    </body>
+</html>

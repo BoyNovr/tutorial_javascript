@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //foreach =memecah atau mengambil setiap bagian array satu per satu
+                const angka=[300,100,2,1,150]
+                angka.forEach(myFunction)//mengambil setiap elemen array satu persatu
+                function myFunction(value,index,array){
+                    console.log(value)
+                    console.log(index)
+                    
+                }
+                //map =memetakan semua data pada array dengan tidak mengubah data array asli
+                // kemudian memanipulasi data pada array dengan menggunakan fungsi
+                const number1=[45,4,9,16,25];
+                const number2=number1.map(myFunction2)
+                function myFunction2(value,index,array){
+                    return value*2;
+                }
+                console.log(number2)
+                //filter untuk memfilter array yang ingin di ambil sesuai kondisi yang di harapkan
+                const number3=number1.filter(myFunction3).sort()
+                function myFunction3(value){
+                    return value >18
+                }
+                console.log(number3)
+                //every untuk memeriksa semua nilai pada array apakah semua sesuai kondisi , mengembalikan nilai boolean
+                let allOver18=number1.every(myFunction4)
+                //some sama seperti every tetapi menghasilkan nilai true jika ada beberapa kondisi yang terpenuhi dalam array
+                let someOver18=number1.some(myFunction4)
+                function myFunction4(value,index){
+                    return value >18 //false
+                }
+                console.log(allOver18)
+                console.log(someOver18)
+                //indexOf mencari urutan index ke berapa nilai pada array yang di tentukan
+                //indexOf=case sensitive
+                const fruits=["apple","orange","avocado","mango"];
+                let position=fruits.indexOf("apple")//0
+                let position2=fruits.indexOf("mango")//3
+                console.log(position)
+                console.log(position2)
+                //find =>menemukan nilai array pertama pada elemen array yang memenuhi kondisi
+                const bilangan=[4,9,16,25,29];
+                let first=bilangan.find(myFunctionfind)
+                function myFunctionfind(value,index){
+                    return value >18
+                }
+                console.log(first)//25
+            </script>
+        </body>
+    </head>
+</html>
