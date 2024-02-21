@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //arrow function
+                //satu argumen
+                const increment= x=> x+1;
+                console.log(increment(2));
+                //tanpa argumen
+                const logs=()=> console.log('hello world')
+                logs()
+                //lebih dari satu argumen tambahkan kurung
+                const multi=(x,y)=>console.log(x*y);
+                multi(3,5)
+                //multi line argument tambahkan kurung kurawal
+                const cekUmur=(n)=>{
+                    if(n<=18){
+                        return false
+                    }
+                    return true
+                }
+               console.log(cekUmur(25))
+               //spread syntax=ekspan atau menyingkat sebuah iterable
+               //spread syntax= ...
+               //menggabung array ke array lain
+               let numberr=[4,5];
+               let additionalNumbers=[1,2,3,...numberr,6,7];
+               console.log(additionalNumbers)
+               //jika tanpa spread syntax
+               //jika ada ratusan data kan menjadi sulit
+               let numberss=[4,5];
+               let additionalNumberss=[1,2,3,numberss[0],numberss[1],6,7]
+               console.log(additionalNumberss)
+
+               function sumThreeNumbers(a,b,c){
+                return a+b+c
+               }
+               const threeNumbers=[5,6,2];
+               console.log(sumThreeNumbers(...threeNumbers));
+               const object1={
+                firstName:"Boy",
+                lastName:"Novriyal"
+               }
+               const object2={
+                birthdate:"20 November 1993"
+               }
+               const object3={...object1,...object2}
+               console.log(object3)
+               //for of loop
+               const nomor=[100,200,300]
+               for(const nmr of nomor){
+                console.log(nmr)
+               }
+               for(const nmrr in nomor){
+                console.log(nmrr)
+               }
+               const alphabet='abcd';
+               for(const character of alphabet){
+                console.log(character)
+               }
+               //for in utk object
+               //jika for in digunakan pada array hasil perulangannya adalah indexnya
+               //pada object adalah keynya
+               const obj={
+                a:1,
+                b:2,
+                c:3,
+               }
+               for(const key in obj){
+                console.log(`${key} => ${obj[key]}`)
+               }
+            </script>
+        </body>
+    </head>
+</html>

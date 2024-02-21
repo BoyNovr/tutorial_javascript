@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <body>
+            <script>
+                const d=new Date(2023,11,20,10,20,30,10);//Wed Dec 20 2023 10:20:30 GMT+0700 (Waktu Indonesia Barat)
+                //januari =0, desember=11
+                console.log(d)
+                console.log(new Date())//Wed Feb 21 2024 17:28:55 GMT+0700 (Waktu Indonesia Barat)
+                //new date(date string)
+                let dat=new Date("october 15,2023 12:00:10")
+                console.log(dat)
+                console.log(dat.toUTCString())//date method
+                console.log(dat.toDateString())//date method
+                console.log(dat.toISOString())//date method
+                //new date(millisecond)
+                const datee=new Date(100000000000)
+                console.log(datee)
+                console.log(new Date("20 maret 2019"))
+                //date get method
+                let h=new Date()
+                console.log(h.getTime())//jumlah milisecond sejak 1970
+                console.log(h.getFullYear())//return tahun
+                console.log(h.getMonth())//return bulan
+                console.log(h.getDate())//return tanggal
+                console.log(h.getHours())//return tanggal
+                console.log(h.getMinutes())//return tanggal
+                console.log(h.getMilliseconds())//return tanggal
+                console.log(h.getDay())//return tanggal minggu=0,senin 1 dst
+                const dt=new Date()
+                dt.getDay()//result 2
+                const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+                let day=days[dt.getDay()]
+                console.log(day)
+                //set date
+                let nd=new Date();
+                // nd.setTime(100000000)//milisecond dari object 1970
+                // console.log(nd)
+              nd.setFullYear(2023)
+              nd.setMonth(11)
+              console.log(nd)
+
+            </script>
+        </body>
+    </head>
+</html>
