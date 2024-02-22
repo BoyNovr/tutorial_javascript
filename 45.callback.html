@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <body>
+            <script>
+                // function greeting(name){
+                //     alert('hello' + name);
+                // }
+                // function processUserInput(callback){
+                //     var name=prompt('Please enter your name.');
+                //     callback(name)
+                // }
+                // processUserInput(greeting);
+                //callback arrow function
+                const greeting=(name)=>{
+                    alert('Hello ' + name);
+                };
+                const processUserInput=(callback)=>{
+                    var name=prompt('Please enter your name');
+                    callback(name);
+                }
+                processUserInput(greeting);
+                //callback sebagai customisasi fungsi
+                function compareNumber(a,b){
+                    return a-b;
+                }
+                var list=[1,30,4,21,100000]
+                console.log(list.sort(compareNumber))
+                //cara lain
+                var listt=[1,30,4,21,100000];
+                listt.sort(function compareNumber(a,b){//compareNumber juga bisa di hapus sehingga menggunakan anonymouse function
+                    return a-b;
+                })
+                //arrow function
+                var lisst=[1,30,4,21,100000];
+                list.sort((a,b)=>{
+                    return a-b;
+                })
+                //var lisst=[1,30,4,21,100000];
+                //lisst.sort((a,b)=>a-b)
+                
+            </script>
+        </body>
+    </head>
+</html>
