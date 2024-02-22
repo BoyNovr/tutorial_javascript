@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <body>
+            <script>
+             //biasanya reduce digunakan untuk number bukan string
+             const student=[
+                    {name:'Boy' ,age:30},
+                    {name:'rudi',age:25},
+                    {name:'yudi',age:28},
+                    {name:'andi',age:29},
+                    {name:'yuli',age:27}
+                ];
+                const sumAges=student.reduce((previous,current)=>previous+current.age,0);
+                //initial value menjadi nilai awal pada prev, current values adalah nilai value pada saat iterasi
+                //nilai prev akan update sesuai fungsi penambahan saat iterasi berjalan
+                console.log(sumAges)
+                const averageAge=sumAges/student.length;
+                console.log(averageAge)
+            </script>
+        </body>
+    </head>
+</html>

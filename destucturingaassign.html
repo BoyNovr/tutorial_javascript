@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <body>
+            <script>
+            //mengambil data dari object properti atau elemen array dengan lebih mudah
+            const food=['Nasgor','Bakso']
+            const[first,second]=food;
+            console.log(first)
+            console.log(second)
+            //tanpa destructuring
+            const Car={
+                name:'Avanza',
+                manufaktur:'toyota',
+                topSpeed:'180kmph'
+            }
+            const name=Car.name;
+            const manufaktur=Car.manufaktur;
+            const topSpeed=Car.topSpeed;
+            console.log(name, manufaktur, topSpeed)
+            //menggunakan destructuring
+            const {namee,manufakturr,topSpeedd}={
+                namee:'avanza',
+                manufakturr:'toyota',
+                topSpeedd:'180 kmph'
+            }
+            console.log(namee, manufaktur, topSpeed)
+            //jika ingin menggunakan nama variable lain yang berbeda untuk nama variable ekstacnya
+            //agar lebih aman menggunakan nama variable lain
+            const {nameee:carName,manufakturrr,topSpeeddd}={
+                nameee:'Innova',
+                manufakturre:'toyota',
+                topSpeeddd:'180 kmph'
+            }
+            console.log(carName, manufaktur, topSpeed)
+    
+
+            </script>
+        </body>
+    </head>
+</html>

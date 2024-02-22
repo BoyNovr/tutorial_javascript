@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <body>
+            <script>
+                const student=[
+                    {name:'Boy' ,age:30},
+                    {name:'rudi',age:25},
+                    {name:'yudi',age:28},
+                    {name:'andi',age:29},
+                    {name:'yuli',age:27}
+                ];
+                const output=student.filter(student=>student.age>27);
+                console.log(output)
+                //beda filter dengan map, map akan menhasilkan boolean
+                const output1=student.map(student=>student.age>27);
+                console.log(output1)
+            </script>
+        </body>
+    </head>
+</html>

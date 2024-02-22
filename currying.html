@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <body>
+            <script>
+            // teknik mengubah fungsi yang menerima lebih dari satu argumen menjadi beberapa fungsi yang menerima satu argumen
+            //dipecah karena terkadang ada argumen yang tidak sering berubah sehingga meminimalisir error 
+            const multiply=(a,b)=>a*b;
+             console.log(multiply(4,4));
+
+             const curriedMultiply=(a)=>(b)=>a*b
+             console.log(curriedMultiply(4)(4));
+             //tanpa currying
+             const generateUrl=(protocol,hostname,page)=>{
+                return `${protocol}${hostname}${page}`;
+             }
+             console.log(generateUrl('http://','belajar.com','/login'));
+             console.log(generateUrl('http://','belajar.com','/belajar/1'));
+             console.log(generateUrl('http://','belajar.com','/belajar/2'));
+             console.log(generateUrl('http://','belajar.com','/belajar/3'));
+             //menggunakan currying
+             const generateUrlC=(protocol)=>(hostname)=>(page)=>`${protocol}${hostname}${page}`;
+             const httpbelajar=generateUrlC('https://')('belajar.com');
+             console.log(httpbelajar('/login'));
+             console.log(httpbelajar('/belajar/1'));
+             console.log(httpbelajar('/belajar/2'));
+             console.log(httpbelajar('/belajar/3'));
+
+             
+
+             
+
+
+            </script>
+        </body>
+    </head>
+</html>
