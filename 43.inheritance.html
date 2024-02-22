@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <body>
+            <script>
+                class People{
+                    constructor(name,age){
+                        this.name=name
+                        this.age=age
+                        this.job='Jobless'
+                    }
+                    get getJob(){
+                        return this.job
+                    }
+                }
+                //child class
+                class PersonWithJob extends People{
+                    constructor(name,age,job){
+                        //super adalah fungsi bawaan dalam constructor dan bisa dianggap seperti saat instansi-> new People(name,age)
+                        super(name,age)
+                        this.job=job
+                    }
+                }
+                const people1=new People("Boy",30)
+                const people2=new PersonWithJob("rudi",26,"Developer")
+                console.log(people1.getJob)//'jobless'
+                console.log(people2.getJob)//developer
+            </script>
+        </body>
+    </head>
+</html>

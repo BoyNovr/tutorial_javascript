@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //public and private property
+                class Person{
+                //tanda pagar artinya properti tersebut private property
+                #relationship
+                constructor(name,age){
+                    //tanpa tanda pagar artinya public property
+                    this.name=name
+                    this.age=age
+                    this.#relationship='In shambles'
+                }
+                //properti private tidak bisa di akses di luar kelas, untuk bisa menggunakannya diluar class
+                //gunakan getter
+                get getRelationship(){
+                    return this.#relationship
+                }
+                //cara lain: get nya di hidden namun saat instansi tambahkan ()
+                getRelation(){
+                    return this.#relationship
+                }
+                }
+                const person=new Person("Boy",30)
+                console.log(person.getRelationship)//In shambles
+                console.log(person.getRelation())//In shambles
+                //apabila mencoba mengakses secara langsung
+                //console.log(person.#relationship)//Private field '#relationship' must be declared in an enclosing class
+                console.log(person.relationship)//undefined
+            </script>
+        </body>
+    </head>
+</html>

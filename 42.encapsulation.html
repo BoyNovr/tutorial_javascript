@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //encapsulation adalah cara berpikir bukan cara koding untuk mengatasi masalah pengaksesan variable di luar class 
+                //tanpa menerapkan encapsulation variable dalam object dapat kemungkinan dirubah di luar class
+                //contoh tanpa menerapkan encapsulation
+            class Ongkir{
+                constructor(weight){
+                    this.pajak=1000
+                    this.biaya=this.calculatePrice(weight)
+                }
+                calculatePrice(weight){
+                    return weight*1000
+                }
+                get totalPrice(){
+                    return this.biaya + this.pajak
+                }
+            }
+            const ongkir=new Ongkir(20)
+            console.log(ongkir.totalPrice)//21000
+            ongkir.pajak=2000//merubah nilai variable pajak
+            console.log(ongkir.totalPrice)//22000
+            //solusinya properti pajak harus di buat sebagai private properti sehingga tidak dapat di akses di luar class 
+            //kecuali menggunakan method getter
+            </script>
+        </body>
+    </head>
+</html>

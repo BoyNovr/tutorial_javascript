@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //polymorphism adalah sebuah konsep untuk membuat berbagai variable atau method yang sama tetapi memiliki nilai atau return yang berbda
+                //digunakan apabila sebuah kelas bisa me reuse class lain, namun perlu sedikit perubahan
+                //daripada menulis ulang, sebaiknya meng adjust hal yang perlu sedikit perubahan
+                class Indonesian{
+                    constructor(name){
+                        this.name=name
+                    }
+                    greeting(){
+                        return `halo, Nama Saya ${this.name}`
+                    }
+                }
+                class Javanese extends Indonesian{
+                    constructor(name){
+                        super(name)
+                    }
+                    greeting(){
+                        return `Sugeng enjing, nami kula ${this.name}`
+                    }
+                }
+                const indonesian=new Indonesian("BOY")
+                const javanese=new Javanese("Rudi")
+                console.log(indonesian.greeting())//halo, Nama Saya BOY
+                console.log(javanese.greeting())//Sugeng enjing, nami kula Rudi
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //huruf kapital awal nama function menandakan ini adalah constructor function
+                function Person(name, age){
+                    this.name=name,
+                    this.age=age
+                }
+                //lalu membuat instansi
+                const personOne=new Person('boy', 30)
+                const personTwo=new Person("rudi",25)
+                console.log(personOne)
+                console.log(personTwo)
+                //menambahkan variable pada instansi constructor function dari luar
+                function Human(name,age){
+                    this.name=name
+                }
+                const person1=new Human("Budi")
+                const person2=new Human("ani")
+                console.log(person1)
+                person1.age=30;
+                console.log(person1)
+                console.log(person2.age)//undefined
+                //menambahkan age menjadi variabel global umur untuk semua instansi 
+                //Person.prototype.age=30
+                //this = mendeklarasikan variable dengan langsung mengambil nilai nya tanpa perlu return
+                //contoh tanpa this
+                function Personn(){
+                    const name='Kiki';
+                    const status='confused';
+                    return{
+                        name,
+                        status
+                    };
+
+                } 
+                const personbaru=Personn();
+                console.log(personbaru.name)
+                //contoh dengan this
+                function Persont(){
+                    this.name='andi';
+                    this.status='confused';
+                }
+                const person3=new Persont();
+                console.log(person3.name)
+                //contoh lain dengan arrow function
+                //perlu return
+                // const Persoon=()=>{
+                //     this.name='boy'
+                //     return{
+                //         name
+                //     }
+                // }
+                // const x=Persoon()
+                // console.log(x.name)
+                const Persoon=(newName)=>{
+                    this.name=newName;
+                    return{
+                        name:this.name,
+                    }
+                }
+                const y=Persoon("fani");
+                console.log(y.name)
+                //cara lain dengan menggunanclass constuctor
+                class Orang{
+                    constructor(newName,newAge){
+                        this.name=newName
+                        this.age=newAge
+                    }
+                }
+                const p=new Orang("Boy",30)
+                console.log(p.age)
+                const o=new Orang("andi",36)
+                console.log(o.age)
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <body>
+            <script>
+                class Person{
+                    constructor(name){
+                        this.name=name
+                        this.age=this.randomize()
+                    }
+                    randomize(){
+                        return Math.floor(Math.random(100)*100)
+                    }
+                }
+                const p=new Person("Boy")
+                // console.log(p.age)
+                // console.log(p.randomize())
+                console.log(p)
+                //static method
+                class Something{
+                    static randomize(){
+                        return Math.random(100)*100
+                    }
+                    static log(str){
+                        console.log(str)
+                    }
+                }
+                Something.log(Something.randomize())
+                //getter and setter
+                class Personn{
+                    constructor(newName,newAge){
+                        this.name=newName
+                        this.age=newAge
+                    }
+                    get getName(){
+//bisa di tulis seperti ini -> getName(){
+//namun saat instansi tambahkan kurung
+                        return this.name
+                    }
+                }
+                const pp=new Personn("Boy",30)
+                console.log(pp.getName)
+                // console.log(pp.getName())
+                class Orang{
+                    constructor(newName,newAge,gender){
+                        this.name=newName
+                        this.age=newAge
+                        this.gender=gender
+                    }
+                    get getName(){
+                        return ((this.gender ==="L" ? "Halo Tuan ":"Halo Nyonya ") + this.name)
+                    }
+                    set setName(changedName){
+                        this.name=changedName
+                    }
+                }
+                const pk=new Orang("Boy",30,"L")
+                console.log(pk.getName)
+                pk.setName="Novriyal"
+                console.log(pk.getName)
+
+            </script>
+        </body>
+    </head>
+</html>
