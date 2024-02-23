@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <body>
+            <script>
+                function downloadImage(url){
+                    return new Promise(function(resolve,reject){
+                        const image=download(url)
+                        if(image)resolve(image)
+                        else reject('gagal mengunduh gambar: url salah')
+                    })
+                }
+                downloadImage('https://mysite.com/gambar.jpg')
+                //karena prosesnya asnychronous untuk mendapatkan data nya perlu menggunakan then
+                //menerima image
+                .then(function(image){
+                    //make image black and white
+                    return blackWhiteImage
+                })
+                 //chained promise=> nilai pada block then bisa di terima kembali dengan method then lainnya
+                 //dan di olah kembali nilainya
+                 //chained promise adalah solusi dari callback hell, dimana proses yang saling bergantungan
+                 //dapat di handle dengan lebih mudah
+                .then(function(blackWhiteImage){
+                    //do something with black and white image
+                })
+            
+                //catch untuk menangkap error jika pada block then ada error
+                .catch(function(error){
+                    console.log(error)
+                })
+            </script>
+        </body>
+    </head>
+</html>
