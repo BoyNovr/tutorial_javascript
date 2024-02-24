@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <body>
+            <script>
+                //fetch merupakan fungsi yang bersifat asnchronous, jika tanpa then maka output hanya menampilkan status pending
+                //maka then diperlukan untuk menerima data yg masih bebentuk stream yang kemudian data di parse ke dalam bentuk json.
+           //method get
+            const resource='https://jsonplaceholder.typicode.com/todos'
+           const option={method:'GET'}
+           fetch(resource,option)
+           .then(response=>response.json())
+           .then(parsedResponse=>console.log(parsedResponse))
+           //method post
+           const resource2='https://jsonplaceholder.typicode.com/todos'
+           const option2={
+            method:'POST',
+            body:JSON.stringify({
+                title:'Website Development',
+                completed:false
+            })
+           }
+           fetch(resource2,option2)
+           .then(data=>data.json())
+           .then(data=>console.log(data))
+           .catch(error=>console.log('ada error',error))
+           </script>
+        </body>
+    </head>
+</html>
